@@ -1,0 +1,98 @@
+
+🎯 Linux Learning Progress:-
+Mere hisaab se tumhare cybersecurity roadmap ke liye priority ye honi chahiye:
+✅ Chapters 1–11 (must know)
+✅ Chapters 15, 16, 18, 19, 20 (high priority)
+✅ Fir Nmap → Wireshark → Burp Suite → Web Security → Active Directory → Privilege Escalation → TryHackMe Labs
+🔹 Chapters 21–30 ko baad me padhna, jab tum intermediate level par pahunch jao.
+
+
+Beginner
+│
+├── 1. Fundamentals
+├── 2. Navigation
+├── 3. File Management
+├── 4. Reading Files
+├── 5. Searching
+├── 6. Users & Permissions
+├── 7. Processes
+├── 8. Package Management
+├── 9. Networking
+│
+▼
+Intermediate
+│
+├── 10. Bash Scripting
+├── 11. Logs & Services
+├── 12. Compression
+├── 13. Storage
+├── 14. Environment Variables
+├── 15. Redirection & Pipes
+├── 16. Text Processing
+├── 17. Task Scheduling
+├── 18. Hashing
+├── 19. SSH Keys
+├── 20. Linux Security
+│
+▼
+Advanced
+│
+├── 21. LVM
+├── 22. RAID
+├── 23. Kernel Modules
+├── 24. Boot Process
+├── 25. Signals
+├── 26. Namespaces
+├── 27. Docker
+├── 28. AppArmor / SELinux
+├── 29. Performance Monitoring
+└── 30. Linux Forensics
+
+
+
+
+🐧 Linux for Cybersecurity – Complete Chapters
+Chapter	Topic	Status
+✅ Chapter 1	Linux Fundamentals	Completed
+✅ Chapter 2	Linux File System & Navigation	Completed
+✅ Chapter 3	File & Directory Management	Completed
+✅ Chapter 4	Viewing & Reading Files	Completed
+✅ Chapter 5	Searching & Filtering	Completed
+✅ Chapter 6	Users, Groups & Permissions	Completed
+✅ Chapter 7	Processes & Job Control	Completed
+✅ Chapter 8	Package Management & Software Installation	Completed
+✅ Chapter 9 (Part 1)	Linux Networking – Foundation	Completed
+✅ Chapter 9 (Part 2)	Linux Networking – Advanced	Completed
+⏳ Chapter 10	Bash Scripting for Cybersecurity	Next
+⏳ Chapter 11	System Logs, Services & Systemd	Pending
+🏆 Advanced Linux (Highly Recommended)
+
+Ye topics har cybersecurity role me equally zaroori nahi hote, lekin Pentesting, SOC aur Linux Administration me bahut kaam aate hain.
+
+Chapter	Topic
+Chapter 12	File Compression & Archiving (tar, gzip, zip, unzip, xz)
+Chapter 13	Disk & Storage Management (df, du, lsblk, mount, umount, fdisk, blkid)
+Chapter 14	Environment Variables & Shell (PATH, .bashrc, aliases, shell startup)
+Chapter 15	Bash Redirection & Pipes (>, >>, <, 2>, `
+Chapter 16	Text Processing (awk, sed, cut, sort, uniq, tr, paste)
+Chapter 17	Scheduling Tasks (cron, crontab, at)
+Chapter 18	File Integrity & Hashing (md5sum, sha256sum, sha512sum)
+Chapter 19	SSH Keys & Secure Authentication
+Chapter 20	Linux Security & Hardening (Firewall, Fail2Ban, Permissions, Auditing)
+🔥 Expert Linux for Cybersecurity
+
+Ye topics experienced professionals use karte hain.
+
+Chapter	Topic
+Chapter 21	LVM (Logical Volume Manager)
+Chapter 22	RAID Basics
+Chapter 23	Kernel Modules (lsmod, modprobe)
+Chapter 24	Boot Process (BIOS → UEFI → GRUB → Kernel → systemd)
+Chapter 25	Process Internals & Signals
+Chapter 26	Network Namespaces
+Chapter 27	Containers (Docker Basics)
+Chapter 28	AppArmor & SELinux Basics
+Chapter 29	Performance Monitoring (vmstat, iostat, free, uptime)
+Chapter 30	Linux Forensics & Incident Response
+
+
