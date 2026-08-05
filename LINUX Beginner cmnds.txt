@@ -217,8 +217,20 @@ Chapter 9 – Linux Networking (Part-1)
 | `ss -tunap`  | Active connections        |
 
 
+🐧Chapter 9 – Part 3 (Advanced Networking)
 
-
+| Command                        | Purpose                     |                    |
+| ------------------------------ | --------------------------- | ------------------ |
+| `ip route`                     | Show routing table          |                    |
+| `ip r`                         | Short form of routing table |                    |
+| `route -n`                     | Legacy routing table        |                    |
+| `ip route add ...`             | Add route                   |                    |
+| `ip route del ...`             | Delete route                |                    |
+| `ip route add default via ...` | Add default gateway         |                    |
+| `ip route                      | grep default`               | Show default route |
+| `tracepath host`               | Trace packet path           |                    |
+| `traceroute host`              | Show all hops               |                    |
+| `ping host`                    | Connectivity test           |                    |
 
 
 
