@@ -1,5 +1,9 @@
 # Linux-Roadmap-for-Cybersecurity
-Linux for Cybersecurity – Complete Chapters🟢 Beginner 🟡 Advanced 🔴 Expert
+Linux for Cybersecurity – Complete Chapters
+
+🟢 Beginner
+🟡 Advanced
+🔴 Expert
 
 
 
