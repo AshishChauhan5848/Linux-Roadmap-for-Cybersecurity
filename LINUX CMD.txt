@@ -1,0 +1,226 @@
+🐧 Linux for Cybersecurity - Commands Cheat Sheet
+
+
+📘 Chapter 1 – Linux Fundamentals
+
+| Command        | Purpose                                       |
+| -------------- | --------------------------------------------- |
+| `whoami`       | Current logged-in user                        |
+| `sudo command` | Command ko root privileges ke saath run karna |
+
+
+📘 Chapter 2 – File System & Navigation
+
+| Command         | Purpose                                   |
+| --------------- | ----------------------------------------- |
+| `pwd`           | Current working directory dikhata hai     |
+| `ls`            | Files aur folders list karta hai          |
+| `ls -l`         | Detailed list                             |
+| `ls -a`         | Hidden files bhi dikhata hai              |
+| `cd directory`  | Directory change karna                    |
+| `cd ..`         | Ek level upar jana                        |
+| `cd ~`          | Home directory me jana                    |
+| `cd /`          | Root directory me jana                    |
+| `cd -`          | Previous directory me jana                |
+| `which command` | Command ka executable location batata hai |
+
+
+📘 Chapter 3 – File & Directory Management
+
+| Command                    | Purpose                       |
+| -------------------------- | ----------------------------- |
+| `touch file.txt`           | Empty file create karna       |
+| `mkdir folder`             | Folder create karna           |
+| `mkdir -p a/b/c`           | Nested folders create karna   |
+| `cp source destination`    | File copy karna               |
+| `cp -r source destination` | Folder recursively copy karna |
+| `mv source destination`    | Move ya rename karna          |
+| `rm file`                  | File delete karna             |
+| `rm -r folder`             | Folder delete karna           |
+| `rm -rf folder`            | Force delete folder           |
+| `rmdir folder`             | Empty folder delete karna     |
+
+
+📘 Chapter 4 – Viewing & Reading Files
+
+| Command           | Purpose                           |
+| ----------------- | --------------------------------- |
+| `cat file`        | Puri file dekhna                  |
+| `less file`       | Large file ko page-wise padhna    |
+| `more file`       | Basic pager                       |
+| `head file`       | First 10 lines                    |
+| `head -5 file`    | First 5 lines                     |
+| `tail file`       | Last 10 lines                     |
+| `tail -20 file`   | Last 20 lines                     |
+| `tail -f file`    | Live log monitoring               |
+| `nl file`         | Line numbers ke saath file        |
+| `wc file`         | Lines, words aur characters count |
+| `wc -l file`      | Sirf lines count                  |
+| `wc -w file`      | Sirf words count                  |
+| `wc -m file`      | Sirf characters count             |
+| `file filename`   | File type identify karna          |
+| `strings binary`  | Binary se readable text nikalna   |
+| `stat file`       | File metadata                     |
+| `hexdump -C file` | Hexadecimal view                  |
+
+
+📘 Chapter 5 – Searching & Filtering
+
+| Command                | Purpose                              |
+| ---------------------- | ------------------------------------ |
+| `find . -name "*.txt"` | File search                          |
+| `find . -type f`       | Sirf files                           |
+| `find . -type d`       | Sirf directories                     |
+| `find . -empty`        | Empty files/folders                  |
+| `find . -size +100M`   | Size ke hisaab se search             |
+| `find . -mtime -7`     | Last 7 days modified files           |
+| `locate file`          | Fast search                          |
+| `updatedb`             | Locate database update               |
+| `which command`        | Executable path                      |
+| `whereis command`      | Command + manuals + files            |
+| `grep text file`       | File ke andar text search            |
+| `grep -i`              | Ignore case                          |
+| `grep -r`              | Recursive search                     |
+| `grep -n`              | Line numbers                         |
+| `grep -v`              | Matching line ko exclude             |
+| `grep -c`              | Match count                          |
+| `grep -o`              | Sirf matched word                    |
+| `sort file`            | Alphabetical sort                    |
+| `sort -r`              | Reverse sort                         |
+| `sort -n`              | Numeric sort                         |
+| `uniq`                 | Consecutive duplicates remove        |
+| `cut -d "," -f1 file`  | Column extract                       |
+| `tr a-z A-Z`           | Character convert                    |
+| `xargs`                | Output ko next command me pass karna |
+
+
+📘 Chapter 6 – Users, Groups & Permissions
+
+| Command                      | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `whoami`                     | Current user                        |
+| `id`                         | UID, GID aur Groups                 |
+| `groups`                     | Current user groups                 |
+| `groups username`            | Kisi user ke groups                 |
+| `who`                        | Logged-in users                     |
+| `w`                          | Active users aur unki activity      |
+| `passwd`                     | Password change                     |
+| `sudo passwd username`       | Dusre user ka password change       |
+| `sudo command`               | Root privileges ke saath command    |
+| `su`                         | Root user switch                    |
+| `su username`                | Dusre user me switch                |
+| `useradd username`           | User create                         |
+| `useradd -m username`        | Home directory ke saath user create |
+| `passwd username`            | User password set                   |
+| `usermod -aG group username` | Group me add karna                  |
+| `userdel username`           | User delete                         |
+| `userdel -r username`        | User + Home delete                  |
+| `ls -l`                      | Owner aur permissions dekhna        |
+| `chmod 755 file`             | Numeric permissions                 |
+| `chmod u+x file`             | Execute permission add              |
+| `chmod g-w file`             | Group write remove                  |
+| `chown user file`            | Owner change                        |
+| `chown user:group file`      | Owner + Group change                |
+| `chgrp group file`           | Group change                        |
+
+
+📘 Chapter 7 – Processes & Job Control
+
+| Command                 | Purpose                            |
+| ----------------------- | ---------------------------------- |
+| `ps`                    | Current shell processes            |
+| `ps -e`                 | All processes                      |
+| `ps -A`                 | All processes                      |
+| `ps aux`                | Detailed process list              |
+| `top`                   | Live process monitor               |
+| `htop`                  | Advanced process monitor           |
+| `kill PID`              | Process terminate                  |
+| `kill -9 PID`           | Force terminate                    |
+| `killall process`       | Name se process terminate          |
+| `jobs`                  | Background jobs                    |
+| `fg`                    | Foreground me lana                 |
+| `bg`                    | Background me continue             |
+| `pstree`                | Process tree                       |
+| `pgrep process`         | Process PID find                   |
+| `pidof process`         | PID find                           |
+| `nice -n value command` | Priority ke saath process start    |
+| `renice value -p PID`   | Running process priority change    |
+| `nohup command &`       | Terminal band hone ke baad bhi run |
+| `Ctrl + Z`              | Process pause                      |
+| `Ctrl + C`              | Process stop                       |
+
+
+📘 Chapter 8 – Package Management
+
+| Command                    | Purpose                        |
+| -------------------------- | ------------------------------ |
+| `apt update`               | Package list refresh           |
+| `apt upgrade`              | Installed packages update      |
+| `apt full-upgrade`         | Full system upgrade            |
+| `apt install package`      | Package install                |
+| `apt remove package`       | Package remove                 |
+| `apt purge package`        | Package + config remove        |
+| `apt autoremove`           | Unused dependencies remove     |
+| `apt clean`                | Package cache clean            |
+| `apt search package`       | Package search                 |
+| `apt show package`         | Package details                |
+| `apt list --installed`     | Installed packages list        |
+| `dpkg -i package.deb`      | `.deb` package install         |
+| `dpkg -l`                  | Installed packages             |
+| `dpkg -L package`          | Package ki installed files     |
+| `dpkg -S file`             | Kis package ne file install ki |
+| `apt --fix-broken install` | Broken dependencies fix        |
+
+
+Chapter 9 – Linux Networking (Part-1)
+
+| Command                | Purpose                 |
+| ---------------------- | ----------------------- |
+| `ip a`                 | Network interfaces      |
+| `ip addr`              | IP details              |
+| `ip -br a`             | Short interface summary |
+| `ip link`              | Interface status        |
+| `ip route`             | Routing table           |
+| `hostname`             | Hostname                |
+| `hostnamectl`          | System & hostname info  |
+| `ping`                 | Connectivity test       |
+| `ping -c 4`            | Limited ping            |
+| `traceroute`           | Packet path             |
+| `arp -a`               | ARP table (legacy)      |
+| `ip neigh`             | Modern ARP table        |
+| `netstat -tuln`        | Open ports (legacy)     |
+| `ss -tuln`             | Open TCP/UDP ports      |
+| `ss -l`                | Listening ports         |
+| `ss -t`                | TCP sockets             |
+| `ss -u`                | UDP sockets             |
+| `cat /etc/resolv.conf` | DNS configuration       |
+
+
+🐧Chapter 9 – Part 2 (Advanced Networking)
+
+| Command      | Purpose                   |
+| ------------ | ------------------------- |
+| `curl`       | HTTP requests/API testing |
+| `curl -I`    | Headers only              |
+| `curl -O`    | Download file             |
+| `curl -o`    | Save with custom name     |
+| `wget`       | Download files            |
+| `wget -c`    | Resume download           |
+| `ssh`        | Remote login              |
+| `scp`        | Secure file transfer      |
+| `dig`        | Advanced DNS lookup       |
+| `nslookup`   | Basic DNS lookup          |
+| `host`       | Quick DNS lookup          |
+| `nc`         | Port testing & listener   |
+| `tcpdump`    | Packet capture            |
+| `ip -s link` | Interface statistics      |
+| `ss -tunap`  | Active connections        |
+
+
+
+
+
+
+
+
+
