@@ -32,16 +32,31 @@ Linux Kernel
    ↓
 Hardware
 
-
-⚫ </> Bash
-
-
+</> Bash
+#!/bin/bash       ------> Run this script using Bash.
 
 
+⚪ echo
 
+Sabse important command.
 
+echo Hello
+otput - Hello
 
+--->Example
+echo "Welcome"
+echo "Linux"
+echo "Bash"
 
+Output :- Welcome
+          Linux
+          Bash
+
+⚫Topic 4 - Variables   -------> Variable = Data store karna.
+</> Bash
+1. name="Ashish"                  2.age=25 
+   echo $name                       echo $age
+   Output :- Ashish
 
 
 
