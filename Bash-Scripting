@@ -1,1 +1,24 @@
+| S. No. | 🟢 Beginner                                🟡 Intermediate              🟠 Advanced                                       🔴 Expert                      |
+| :----: | ------------------------------------------ | -------------------------- | ------------------------------------------------ | ----------------------------- |
+|    1   | Introduction to Bash                       | Comparison Operators       | `grep`                                           | User Management Scripts       |
+|    2   | Installing & Running Scripts               | `if` Statement             | `cut`                                            | Log Analyzer                  |
+|    3   | Shebang (`#!/bin/bash`)                    | `if-else`                  | `sort`                                           | Mini SOC Tool                 |
+|    4   | Comments                                   | `elif`                     | `uniq`                                           | Network Automation            |
+|    5   | Output (`echo`, `printf`)                  | String Comparison          | `wc`                                             | Service Monitoring            |
+|    6   | Variables                                  | File Test Operators        | `head` & `tail`                                  | Deployment Scripts            |
+|    7   | User Input (`read`)                        | `case` Statement           | `awk`                                            | CI/CD Helper Scripts          |
+|    8   | Arithmetic Operations                      | `for` Loop                 | `sed`                                            | Professional Automation Suite |
+|    9   | Exit Status (`$?`)                         | `while` Loop               | `find`                                           | —                             |
+|   10   | Special Variables (`$0`, `$1`, `$#`, `$@`) | `until` Loop               | `xargs`                                          | —                             |
+|   11   | Basic Script Execution                     | `break` & `continue`       | `tee`                                            | —                             |
+|   12   | Basic Linux Commands in Scripts            | Functions                  | `tar`                                            | —                             |
+|   13   | Quoting (Single, Double, Escape)           | Arrays                     | `gzip` / `zip`                                   | —                             |
+|   14   | Command Substitution (`$( )`)              | Command-Line Arguments     | Cron Jobs (`crontab`)                            | —                             |
+|   15   | Input/Output Basics                        | Input & Output Redirection | Process Management (`ps`, `top`, `kill`, `jobs`) | —                             |
+|   16   | Environment Variables                      | Pipes (`\|`)               | Error Handling                                   | —                             |
+|   17   | Shell Built-in Commands                    | String Manipulation        | Logging                                          | —                             |
+|   18   | Script Formatting & Best Practices         | Menu-Driven Scripts        | System Automation                                | —                             |
 
+
+
+----> 🟢 Beginner
