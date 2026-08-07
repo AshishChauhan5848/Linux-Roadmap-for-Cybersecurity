@@ -32,43 +32,36 @@ Linux Kernel
    ↓
 Hardware
 
-</> Bash
-#!/bin/bash       ------> Run this script using Bash.
+🔴</> Bash
+#!/bin/bash       ------>➤ Run this script using Bash.
 
-
-⚪ echo
-
-Sabse important command.
-
-echo Hello
-otput - Hello
-
---->Example
-echo "Welcome"
-echo "Linux"
-echo "Bash"
+⚪ echo   ---->➤Sabse important command.
+--->➤Example
+         echo "Welcome"
+         echo "Linux"
+         echo "Bash"
 
 Output :- Welcome
           Linux
           Bash
 
-⚫Topic 4 - Variables   -------> Variable = Data store karna.
+⚫Topic 4 - Variables   ------->➤ Variable = Data store karna.
 </> Bash                          </> Bash                     </> Bash
 1. name="Ashish"                  2.age=25                         city="Delhi"
    echo $name                       echo $age                      echo "$name lives in $city"
    Output :- Ashish                 Output :- 25                   Output :- Ashish lives in Delhi
 
 
-⚫Topic 5 - User Input   --------> Script user se input lega.
+⚫Topic 5 - User Input   -------->➤ Script user se input lega.
 </> Bash
-read name
+➤read name
 
 </> Bash                               Output :-                        
 1. echo "Enter name"                             Enter name
    read name                                     Ashish
    echo "Welcome $name"                          Welcome Ashish
 
-⚫Topic 6 - Arithmetic   ---> Maths operations
+⚫Topic 6 - Arithmetic   --->➤ Maths operations
 </> Bash  
 1. a=10
    b=5
@@ -81,8 +74,33 @@ age=20
 if [ $age -ge 18 ]
 then
 echo Adult
-fi                   ------->  fi -> if closed here.
+fi                   ------->➤ fi -> if closed here.
 Output :- Adult
+
+⚫Topic 8 - if else
+</> Bash  
+marks=45
+if [ $marks -ge 40 ]
+then
+echo Pass
+else
+echo Fail
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
