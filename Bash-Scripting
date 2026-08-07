@@ -95,17 +95,27 @@ Less ------->➤  -lt
 Greater equal ------->➤ -ge
 Less equal ------->➤-le
 
+⚫Topic 10 - String Comparison
+Equal ------->➤ if [ "$name" = "Ashish" ]
+Not equal ------->➤ !=
+Empty ------->➤ -z
+Not Empty ------->➤ -n
 
+</> Bash
+name="Linux"
+if [ "$name" = "Linux" ]
+then
+echo Correct
+fi
 
+⚫Topic 11 - for Loop
+</> Bash                              </> Bash
+for i in 1 2 3 4 5                       for file in * 
+do                                       do
+echo $i                                  echo $file 
+done                                     done  
 
-
-
-
-
-
-
-
-
+⚫Topic 12 - while Loop
 
 
 
