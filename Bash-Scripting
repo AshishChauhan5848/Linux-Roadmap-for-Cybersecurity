@@ -53,15 +53,20 @@ Output :- Welcome
           Bash
 
 ⚫Topic 4 - Variables   -------> Variable = Data store karna.
+</> Bash                          </> Bash                     </> Bash
+1. name="Ashish"                  2.age=25                         city="Delhi"
+   echo $name                       echo $age                      echo "$name lives in $city"
+   Output :- Ashish                 Output :- 25                   Output :- Ashish lives in Delhi
+
+
+⚫Topic 5 - User Input   --------> Script user se input lega.
 </> Bash
-1. name="Ashish"                  2.age=25 
-   echo $name                       echo $age
-   Output :- Ashish
+read name
 
-
-
-
-
+</> Bash                               Output :-                        
+1. echo "Enter name"                             Enter name
+   read name                                     Ashish
+   echo "Welcome $name"                          Welcome Ashish
 
 
 
