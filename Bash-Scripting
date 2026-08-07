@@ -35,7 +35,7 @@ Hardware
 🔴</> Bash
 #!/bin/bash       ------>➤ Run this script using Bash.
 
-⚪ echo   ---->➤Sabse important command.
+⚫ echo   ---->➤Sabse important command.
 --->➤Example
          echo "Welcome"
          echo "Linux"
@@ -87,8 +87,13 @@ else
 echo Fail
 fi
 
-
-
+⚫Topic 9 - Comparison Operators   ------->➤ To compare no's and other operation
+Equal ------->➤ -eq
+Not equal ------->➤ -ne
+Greater ------->➤ -gt
+Less ------->➤  -lt
+Greater equal ------->➤ -ge
+Less equal ------->➤-le
 
 
 
