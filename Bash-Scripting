@@ -68,14 +68,21 @@ read name
    read name                                     Ashish
    echo "Welcome $name"                          Welcome Ashish
 
+⚫Topic 6 - Arithmetic   ---> Maths operations
+</> Bash  
+1. a=10
+   b=5
+   echo $((a+b))    echo $((a-b))   echo $((a*b))    echo $((a/b))
+Output :-  15             5               50                  2
 
-
-
-
-
-
-
-
+⚫Topic 7 - if Statement
+</> Bash  
+age=20
+if [ $age -ge 18 ]
+then
+echo Adult
+fi                   ------->  fi -> if closed here.
+Output :- Adult
 
 
 
