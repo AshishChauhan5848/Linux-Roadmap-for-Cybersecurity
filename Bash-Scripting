@@ -108,14 +108,62 @@ then
 echo Correct
 fi
 
-⚫Topic 11 - for Loop
+⚫Topic 11 - for Loop   
 </> Bash                              </> Bash
 for i in 1 2 3 4 5                       for file in * 
 do                                       do
 echo $i                                  echo $file 
 done                                     done  
 
-⚫Topic 12 - while Loop
+⚫Topic 12 - while Loop   
+</> Bash
+i=1
+while [ $i -le 5 ]
+do
+echo $i
+((i++))
+done
+
+⚫Topic 13 - Functions  ------->➤   Function = Ek code block jo baar-baar use ho.
+hello(){
+echo Hello
+}
+hello
+Output :- Hello
+
+⚫Topic 14 - Exit Status
+Success ------->➤ 0 ------->➤ true
+Failure ------->➤ 1 ------->➤ false
+
+Example:-
+ls
+echo $?
+Agar ls successful hua:0
+
+⚫Topic 15 - Useful Special Variables
+
+Current Script ------->➤$0
+First Argument ------->➤$1
+Second         ------->➤$2
+Number of Arguments -->➤$#
+All Arguments  ------->➤$@
+Process ID     ------->➤$$
+
+Example:- echo $1
+Run:-  bash test.sh Ashish
+Output:- Ashish
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
