@@ -154,6 +154,16 @@ Run:-  bash test.sh Ashish
 Output:- Ashish
 
 
+⚫Aliases ------->➤ To make shortcuts of any command.
+
+Ab maan lo tum baar-baar ye command chalate ho:
+ls -lah
+
+Tum shortcut bana sakte ho:
+alias ll='ls -lah'
+
+Ab:
+ll  ------->➤ IT will work like an ls-lah
 
 
 
