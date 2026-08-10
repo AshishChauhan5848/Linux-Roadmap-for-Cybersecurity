@@ -1,1 +1,45 @@
+🛡️ Nmap — SOC Analyst ke liye kya hai?
+Nmap = Network Mapper
+WORK- Network par kaunse hosts/devices available hain, unke kaunse ports open hain, aur un ports par kya services chal rahi hain — ye discover karna.
 
+1. Nmap actually kya discover karta hai?
+
+📌Suppose company ke network mein:
+192.168.1.10   → Windows PC
+192.168.1.20   → Linux Server
+192.168.1.30   → Web Server
+192.168.1.40   → Database Server
+
+📌SOC analyst ko pata lagana hai:
+Kaun alive hai?
+        ↓
+Kaunse ports open hain?
+        ↓
+Kaunsi service chal rahi hai?
+        ↓
+Kaunsa version?
+        ↓
+Kya unexpected exposure hai?
+
+Nmap isi visibility ko provide karta hai.
+
+
+💡2. Sabse basic scan
+nmap 192.168.1.10
+
+Example:
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+
+📌Meaning:
+Port	     Service	  SOC meaning
+
+22	        SSH	      Remote administration
+80	        HTTP	    Web service
+443	        HTTPS    	Secure web service
+3389	      RDP	      Windows remote access
+445	        SMB	      Windows file sharing
+53          DNS	      DNS service
+25	        SMTP	    Mail service
