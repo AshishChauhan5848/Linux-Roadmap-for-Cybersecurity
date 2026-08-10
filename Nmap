@@ -1,6 +1,6 @@
 🛡️ Nmap Complete Learning Index — SOC/Cybersecurity Focus
 
-| 🟢 Nmap Fundamentals | 🟡 Host Discovery        | 🟠 Port Scanning        | 🔵 Port States & Interpretation | 🟣 Service & Version Detection | 🔴 NSE                     | 🟤 Firewall / Evasion        | ⚪ Output & Reporting | 🔷 Advanced Nmap          | 🏆 SOC Analyst Skills  |
+| 🟢 Nmap Fundamentals | 🟡 Host Discovery       | 🟠 Port Scanning       | 🔵 Port States & Interpretation | 🟣 Service & Version Detection | 🔴 NSE                    | 🟤 Firewall / Evasion       | ⚪ Output & Reporting| 🔷 Advanced Nmap         | 🏆 SOC Analyst Skills  |
 | -------------------- | ------------------------ | ----------------------- | ------------------------------- | ------------------------------ | -------------------------- | ---------------------------- | -------------------- | ------------------------- | ---------------------- |
 | Nmap kya hai?        | Host Discovery kya hai?  | Ports kya hote hain?    | `open`                          | Service Detection              | NSE kya hai?               | Firewall ka effect           | Normal Output        | IPv6 Scanning             | Asset Discovery        |
 | Nmap Installation    | Ping Scan `-sn`          | Default Scan            | `closed`                        | Version Detection `-sV`        | NSE Categories             | Timing Templates `-T0`–`-T5` | `-oN`                | `-6`                      | Open Port Inventory    |
