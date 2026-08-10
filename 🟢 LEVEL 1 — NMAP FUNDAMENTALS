@@ -2,9 +2,9 @@
                                       🛡️ Nmap Complete Learning Index — SOC/Cybersecurity Focus   
 ==================================================================================================================================
 🟢 LEVEL 1 — NMAP FUNDAMENTALS
-1. Nmap kya hai?
+1️⃣ Nmap kya hai
 Nmap = Network Mapper
-Nmap ek network scanning/reconnaissance tool hai jo mainly ye identify karne ke liye use hota hai:
+"Network mein kaunse hosts hain, kaunse ports open hain aur un ports par kaunsi services chal rahi hain?"
 
 Host alive hai?
         ↓
@@ -25,5 +25,208 @@ Kaunse ports exposed hain
 Kaunsi services running hain
 Koi unauthorized service toh nahi
 Network baseline mein kya change hua
+
+2️⃣ Nmap Install & Verify
+*Kali Linux mein check karo:
+</>Bash
+nmap --version
+
+*Agar installed nahi hai:
+</>Bash
+sudo apt update
+sudo apt install nmap
+
+3️⃣ First Nmap Scan
+Apne authorized lab machine ka IP maan le:
+192.168.1.20
+</>Bash
+nmap 192.168.1.20
+Nmap basic scan karega.
+
+Typical output:
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+
+
+4️⃣ Specific Port Scan
+*Agar sirf port 22 check karna hai:            *Multiple ports:                          *Range:
+nmap -p 22 192.168.1.20                         nmap -p 22,80,443 192.168.1.20            nmap -p 20-100 192.168.1.20
+
+*SOC use
+Agar investigation mein specifically SSH aur HTTP check karna hai:
+nmap -p 22,80 192.168.1.20
+
+5️⃣ All 65535 TCP Ports
+Nmap default scan all 65,535 TCP ports nahi karta.
+
+All TCP ports scan karne ke liye:
+nmap -p- 192.168.1.20
+
+
+DIFFERENECE scan ports SINGLE , RANGE , ALL
+           -p 80
+            ↓
+        Only port 80
+          -p 20-100
+            ↓
+        Ports 20 → 100
+            -p-
+            ↓
+        All TCP ports
+
+6️⃣ Verbose Mode  [-v ---> More information & -vv ----> Even More]
+*More information:              *Even more:
+nmap -v 192.168.1.20             nmap -vv 192.168.1.20
+
+7️⃣ -n — DNS Resolution Disable
+DNS resolution disable:
+nmap -n 192.168.1.20
+
+Why?
+-n
+ ↓
+No DNS resolution
+ ↓
+Potentially faster / less DNS traffic
+
+8️⃣ -Pn — Host Discovery Skip
+Important: -Pn ka matlab target actually alive hai, ye guarantee nahi karta. It simply skips the usual host-discovery step.
+
+-Pn bolta hai:
+"Host discovery mat karo; assume karo host up hai."
+nmap -Pn 192.168.1.20
+
+Kab useful?
+Suppose:
+    Target
+      ↓
+    Firewall
+      ↓
+  Ping blocked
+Nmap ko host down lag sakta hai.
+
+9️⃣ Multiple Targets
+
+Do machines:
+nmap 192.168.1.20 192.168.1.30
+Ya:
+nmap 192.168.1.20,30
+
+🔟 Network Range
+
+Suppose lab network:
+192.168.1.0/24
+
+Scan:
+nmap 192.168.1.0/24
+Ye network ke hosts ko scan karega.
+Lekin SOC learning ke liye pehle -sn se host discovery samajhna better hai, kyunki full port scanning unnecessarily noisy/heavy ho sakti hai
+
+⭐ Sabse Important Concept
+Nmap ko sirf commands ki list mat samajhna.
+Har scan ko is chain mein soch:
+TARGET
+   ↓
+HOST DISCOVERY
+   ↓
+PORT DISCOVERY
+   ↓
+SERVICE DETECTION
+   ↓
+VERSION DETECTION
+   ↓
+OS DETECTION
+   ↓
+NSE
+   ↓
+REPORT
+   ↓
+SOC ANALYSIS
+
+🔥Example:
+nmap -sV 192.168.1.20
+
+Conceptually:
+192.168.1.20
+      ↓
+Which ports?
+      ↓
+Which services?
+      ↓
+Which versions?
+      ↓
+Is anything unexpected?
+
+
+
+🧪 Aaj ki Practice
+Apni Kali + intentionally vulnerable VM/lab par ye commands samajh:
+
+nmap <LAB-IP>
+nmap -v <LAB-IP>
+nmap -n <LAB-IP>
+nmap -Pn <LAB-IP>
+nmap -p 22 <LAB-IP>
+nmap -p 22,80,443 <LAB-IP>
+nmap -p 20-100 <LAB-IP>
+nmap -p- <LAB-IP>
+
+
+
+📝 LEVEL 1 — COMPLETE SUMMARY
+|  # | Sub-topic      | Quick Summary                                                              |
+| -: | -------------- | -------------------------------------------------------------------------- |
+|  1 | Nmap kya hai?  | Nmap network hosts, ports aur services discover/scan karne ka tool hai.    |
+|  2 | Installation   | `sudo apt install nmap` se Nmap install hota hai.                          |
+|  3 | Version Check  | `nmap --version` installed version check karta hai.                        |
+|  4 | Basic Scan     | `nmap <IP>` target ke common TCP ports scan karta hai.                     |
+|  5 | Hostname Scan  | IP ki jagah hostname dekar target scan kar sakte hain.                     |
+|  6 | Multiple Hosts | `nmap IP1 IP2` multiple targets scan karta hai.                            |
+|  7 | Network Range  | `nmap 192.168.1.0/24` poori specified network range ko scan karta hai.     |
+|  8 | Verbose        | `-v` / `-vv` scan ke additional details show karta hai.                    |
+|  9 | Disable DNS    | `-n` DNS resolution ko disable karta hai.                                  |
+| 10 | Skip Discovery | `-Pn` normal host-discovery step skip karke target ko up assume karta hai. |
+
+
+🔑 Level 1 Commands
+nmap --version
+nmap <IP>
+nmap <hostname>
+nmap <IP1> <IP2>
+nmap <NETWORK>/24
+nmap -v <IP>
+nmap -vv <IP>
+nmap -n <IP>
+nmap -Pn <IP>
+
+🧠 Level 1 in One Flow
+NMAP
+ │
+ ├── Target specify
+ │      ├── IP
+ │      ├── Hostname
+ │      ├── Multiple IPs
+ │      └── Network range
+ │
+ ├── Scan
+ │
+ ├── Verbose information
+ │
+ ├── DNS resolution control
+ │
+ └── Host discovery control
+
+
+
+
+
+
+
+
+
+
+
 
 
