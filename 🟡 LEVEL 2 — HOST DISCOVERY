@@ -62,8 +62,50 @@ Tum discover karte ho:
 Ab SOC investigation start ho sakti hai.
 
 
+2️⃣ Ping Scan — -sn ⭐⭐⭐⭐⭐
+Sabse important host-discovery command.
+nmap -sn <NETWORK>
+
+Example:
+nmap -sn 192.168.1.0/24
+-sn ka meaning
+
+Nmap:
+Host discovery karega, but port scan nahi karega.
+Old Nmap terminology mein ise Ping Scan kaha jata hai.
+
+Example Output
+Nmap scan report for 192.168.1.1
+Host is up
+Nmap scan report for 192.168.1.10
+Host is up
+Nmap scan report for 192.168.1.20
+Host is up
+
+Agar 3 hosts alive hain:
+3 hosts up
 
 
+Normal scan vs -sn
+Normal:
+nmap 192.168.1.20
+
+Concept:
+Host discovery
+      ↓
+Port scanning
+
+-sn:
+nmap -sn 192.168.1.20
+
+Concept:
+Host discovery
+      ↓
+STOP
+Port scanning nahi hoti.
+
+🧠 Yaad rakh:
+-sn = "Sirf hosts batao, ports nahi."
 
 
 
