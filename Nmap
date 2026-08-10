@@ -76,7 +76,24 @@ nmap -iL targets.txt -oN output.txt	       Batch scan - Scan from file, save res
 nmap --script "http-* and not http-brute" 192.168.1.1Script filter - Run specific script categories	Targeted enumeration	
 
 
-
+💎 Cheat Sheet
+| Command                 | Kaam                  |
+| ----------------------- | --------------------- |
+| `nmap IP`               | Top 1000 ports scan   |
+| `nmap -sn Network/24`   | Live hosts only       |
+| `nmap -p 80 IP`         | Single port           |
+| `nmap -p 22,80,443 IP`  | Multiple ports        |
+| `nmap -p- IP`           | All 65535 ports       |
+| `nmap -F IP`            | Fast scan             |
+| `nmap -sV IP`           | Service version       |
+| `sudo nmap -O IP`       | OS detection          |
+| `sudo nmap -A IP`       | Aggressive scan       |
+| `sudo nmap -sS IP`      | SYN (Half-open) scan  |
+| `nmap -sT IP`           | TCP Connect scan      |
+| `sudo nmap -sU IP`      | UDP scan              |
+| `nmap -T4 IP`           | Faster timing         |
+| `nmap --script vuln IP` | Vulnerability scripts |
+| `nmap -oA result IP`    | Save in all formats   |
 
 
 
