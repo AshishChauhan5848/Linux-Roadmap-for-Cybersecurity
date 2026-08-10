@@ -1,0 +1,29 @@
+==================================================================================================================================
+                                      🛡️ Nmap Complete Learning Index — SOC/Cybersecurity Focus   
+==================================================================================================================================
+🟢 LEVEL 1 — NMAP FUNDAMENTALS
+1. Nmap kya hai?
+Nmap = Network Mapper
+Nmap ek network scanning/reconnaissance tool hai jo mainly ye identify karne ke liye use hota hai:
+
+Host alive hai?
+        ↓
+Kaunse ports open hain?
+        ↓
+Kaunsi services chal rahi hain?
+        ↓
+Service ka version kya hai?
+        ↓
+OS kya ho sakta hai?
+
+
+🛡️ SOC mein Nmap kyun important hai?
+SOC Analyst ko network mein pata hona chahiye:
+
+Kaunse systems exist karte hain
+Kaunse ports exposed hain
+Kaunsi services running hain
+Koi unauthorized service toh nahi
+Network baseline mein kya change hua
+
+
