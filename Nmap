@@ -43,3 +43,52 @@ Port	     Service	  SOC meaning
 445	        SMB	    Windows file sharing
 53              DNS	    DNS service
 25	        SMTP	    Mail service
+
+Important: Open port automatically = vulnerability nahi.
+
+
+💎Common Commands
+Command	What it does	                      When to use	                                        Risk
+
+nmap 192.168.1.1                              Basic scan - Scans the 1000 most common ports	        Quick check for open ports	
+nmap -sV 192.168.1.1                          Version detection - Identifies service versions        	Know what software is running	
+nmap -sn 192.168.1.0/24	                      Ping scan - Find live hosts without port scan	        Discover hosts on network	
+nmap -p 80,443 192.168.1.1                    Specific ports - Scan only specified ports	        Target specific services	
+nmap -sS 192.168.1.1                          SYN Stealth scan - Half-open, faster, less detectable	Stealthy scanning	
+nmap -sT 192.168.1.1	                      TCP Connect scan - Full TCP handshake	                When SYN scan not available	
+nmap -sU 192.168.1.1	                      UDP scan - Scan UDP ports	                                Find UDP services like DNS, SNMP	
+nmap -p- 192.168.1.1	                      Full port scan - All 65535 ports	                        Complete port enumeration	
+nmap -O 192.168.1.1                           OS detection - Identify operating system	                Know target OS	
+nmap -A 192.168.1.1                           Aggressive scan - OS, version, scripts, traceroute	Comprehensive info gathering	
+nmap -sS -sV -O -p- -T4 192.168.1.1           Full enumeration - Stealth + version + OS + all ports	Complete target profile	
+nmap --script vuln 192.168.1.1	              Vulnerability scan - Run vuln detection scripts	        Find known vulnerabilities	
+nmap --script=http-enum 192.168.1.1	      HTTP enumeration - Find web directories	                Web server recon	
+nmap --script=smb-vuln* 192.168.1.1	      SMB vulnerability scan - Check SMB vulns                	Windows SMB testing	
+nmap -sV --script=banner 192.168.1.1	      Banner grabbing - Get service banners                	Identify services	
+nmap -sS -Pn -n --disable-arp-ping 192.168.1.1	Firewall bypass - Skip host discovery                	When ICMP blocked	
+nmap -sS -f 192.168.1.1                        Fragment packets - Evade simple firewalls        	IDS/Firewall evasion	
+nmap -D RND:10 192.168.1.1                     Decoy scan - Use random decoy IPs	                Hide real IP	
+nmap --source-port 53 192.168.1.1              Source port spoof - Use trusted port	                Bypass port-based firewall	
+nmap -sI zombie_ip 192.168.1.1	               Idle/Zombie scan - Completely anonymous	                Ultimate stealth	
+nmap --script=default,safe 192.168.1.1         Safe scripts - Run non-intrusive scripts	                Safe enumeration	
+nmap -oA scan_results 192.168.1.1	       Save all formats - Output to all file types        	Documentation	
+nmap -iL targets.txt -oN output.txt	       Batch scan - Scan from file, save results	        Multiple targets	
+nmap --script "http-* and not http-brute" 192.168.1.1Script filter - Run specific script categories	Targeted enumeration	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
