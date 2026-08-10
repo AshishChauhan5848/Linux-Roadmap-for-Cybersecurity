@@ -36,10 +36,10 @@ PORT     STATE SERVICE
 📌Meaning:
 Port	     Service	  SOC meaning
 
-22	        SSH	      Remote administration
+22	        SSH	    Remote administration
 80	        HTTP	    Web service
-443	        HTTPS    	Secure web service
-3389	      RDP	      Windows remote access
-445	        SMB	      Windows file sharing
-53          DNS	      DNS service
+443	        HTTPS       Secure web service
+3389	        RDP	    Windows remote access
+445	        SMB	    Windows file sharing
+53              DNS	    DNS service
 25	        SMTP	    Mail service
