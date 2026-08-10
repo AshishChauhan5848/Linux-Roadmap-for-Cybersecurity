@@ -1,1 +1,112 @@
+==================================================================================================================================
+                                      🛡️ Nmap Complete Learning Index — SOC/Cybersecurity Focus   
+==================================================================================================================================
+
+🟡 LEVEL 2 — HOST DISCOVERY
+"Network mein kaunse hosts actually alive hain?"
+
+Level 2 Topics:-
+|  # | Topic                       | Main Command           |
+| -: | --------------------------- | ---------------------- |
+|  1 | Host Discovery kya hai?     | Concept                |
+|  2 | Ping Scan                   | `-sn`                  |
+|  3 | ICMP Echo Discovery         | `-PE`                  |
+|  4 | ICMP Timestamp Discovery    | `-PP`                  |
+|  5 | ICMP Address Mask Discovery | `-PM`                  |
+|  6 | TCP SYN Discovery           | `-PS`                  |
+|  7 | TCP ACK Discovery           | `-PA`                  |
+|  8 | UDP Discovery               | `-PU`                  |
+|  9 | ARP Discovery               | `-PR`                  |
+| 10 | Discovery Combinations      | Multiple probes        |
+| 11 | Live Host Identification    | Practical workflow     |
+| 12 | Firewall ka Effect          | Why discovery can fail |
+
+
+1️⃣ Host Discovery kya hai?
+
+Suppose tera network hai:
+192.168.1.0/24
+Is network mein theoretically bahut saare addresses ho sakte hain.
+
+Nmap ko pehle ye pata lagana hota hai:
+192.168.1.1   → Alive?
+192.168.1.2   → Alive?
+192.168.1.3   → Alive?
+192.168.1.4   → Alive?
+
+Simple flow
+Network
+   ↓
+Host Discovery
+   ↓
+Kaun alive hai?
+   ↓
+Live Hosts
+   ↓
+Port Scanning
+
+
+SOC Example:-
+
+Suppose company network mein:
+100 devices
+hain.
+
+Tum discover karte ho:
+192.168.1.10 → Windows PC
+192.168.1.15 → Linux Server
+192.168.1.20 → Printer
+192.168.1.50 → Unknown Device
+
+192.168.1.50 unexpected hai.
+Ab SOC investigation start ho sakti hai.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
