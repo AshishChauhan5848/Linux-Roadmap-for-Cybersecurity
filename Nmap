@@ -225,14 +225,3 @@ nmap -oA result <IP>      # Save results
 
 
 
-
-
-
-
-
-
-
-
-
-
-
